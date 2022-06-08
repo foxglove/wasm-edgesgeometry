@@ -1,0 +1,52 @@
+{
+  "name": "@foxglove/wasm-edgesgeometry",
+  "version": "0.1.0",
+  "description": "THREE.js EdgesGeometry implementation in C++ compiled to WebAssembly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhurliman/wasm-edgesgeometry.git"
+  },
+  "author": {
+    "name": "Foxglove",
+    "email": "contact@foxglove.dev",
+    "url": "https://foxglove.dev/"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src",
+    "wasm"
+  ],
+  "scripts": {
+    "build:ts": "tsc -b",
+    "build:wasm": "./build.sh",
+    "prepack": "npm run build:ts && npm run build:wasm",
+    "clean": "tsc -b --clean",
+    "lint": "eslint --report-unused-disable-directives --fix src/",
+    "lint:ci": "eslint --report-unused-disable-directives src/",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@foxglove/eslint-plugin": "0.19.0",
+    "@foxglove/tsconfig": "1.1.0",
+    "@types/emscripten": "1.39.6",
+    "@types/jest": "28.1.1",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "babel-plugin-transform-import-meta": "2.1.1",
+    "esbuild": "0.14.43",
+    "esbuild-jest": "0.5.0",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "26.5.3",
+    "eslint-plugin-prettier": "4.0.0",
+    "jest": "28.1.1",
+    "jest-ts-webcompat-resolver": "1.0.0",
+    "prettier": "2.6.2",
+    "typescript": "4.7.3"
+  }
+}
