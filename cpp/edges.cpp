@@ -7,6 +7,7 @@
 #include "edges.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
+// A generic hash function for std::tuple<>
 
 namespace std {
 namespace {
@@ -43,7 +44,9 @@ template <typename... TT> struct hash<std::tuple<TT...>> {
 
 constexpr float DEG2RAD = M_PI / 180;
 
+// Uniquely identifies a quantized point in space
 using VertexKey = std::tuple<int32_t, int32_t, int32_t>;
+// Uniquely identifies a pair of points in (quantized) space
 using EdgeKey =
     std::tuple<int32_t, int32_t, int32_t, int32_t, int32_t, int32_t>;
 
