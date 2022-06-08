@@ -6,7 +6,7 @@ THREE.js EdgesGeometry implementation in C++ compiled to WebAssembly
 
 ## Introduction
 
-This package provides a WebAssembly build of https://threejs.org/docs/#api/en/geometries/EdgesGeometry, a helper method to generate a line list of edges from indexed or unindexed triangles.
+This package provides a WebAssembly build of https://threejs.org/docs/#api/en/geometries/EdgesGeometry, a helper method to generate a line list of edges from indexed or unindexed triangles. Run `yarn bench` to compare the performance of this library against the THREE.js implementation. It should be close to 10x faster for anything from a simple cube to >1MM triangles.
 
 ## Usage
 

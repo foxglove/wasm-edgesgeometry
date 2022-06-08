@@ -1,6 +1,6 @@
 {
   "name": "@foxglove/wasm-edgesgeometry",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "THREE.js EdgesGeometry implementation in C++ compiled to WebAssembly",
   "license": "MIT",
   "repository": {
